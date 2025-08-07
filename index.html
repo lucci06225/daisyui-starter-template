@@ -17,37 +17,39 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body class="bg-base-100 text-base-content">
+<body >
 
-  <!-- Navbar -->
-  <div class="navbar bg-base-200 px-4">
-    <div class="flex-1">
-      <a class="btn btn-ghost text-xl">MySite</a>
+  <div class="bg-base-100 text-base-content max-w-4xl mx-auto">
+    <!-- Navbar -->
+    <div class="navbar bg-base-200 px-4">
+      <div class="flex-1">
+        <a class="btn btn-ghost text-xl">MySite</a>
+      </div>
+      <div class="flex-none hidden md:flex gap-2">
+        <a class="btn btn-sm btn-ghost" href="#">Home</a>
+        <a class="btn btn-sm btn-ghost" href="#">About</a>
+        <a class="btn btn-sm btn-ghost" href="#">Contact</a>
+      </div>
     </div>
-    <div class="flex-none hidden md:flex gap-2">
-      <a class="btn btn-sm btn-ghost" href="#">Home</a>
-      <a class="btn btn-sm btn-ghost" href="#">About</a>
-      <a class="btn btn-sm btn-ghost" href="#">Contact</a>
-    </div>
+    
+    <!-- Hero -->
+    <section class="text-center py-20 px-4">
+      <h1 class="text-4xl font-bold mb-4">Welcome to MySite</h1>
+      <p class="text-lg mb-6 max-w-xl mx-auto">A simple and clean template using Tailwind CSS and DaisyUI. Easy to modify and reuse!</p>
+      <button class="btn btn-primary">Get Started</button>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer items-center justify-between p-4 bg-base-200 text-sm">
+      <aside>
+        <p>© 2025 MySite. All rights reserved.</p>
+      </aside>
+      <nav class="flex gap-2">
+        <a class="link link-hover">Privacy</a>
+        <a class="link link-hover">Terms</a>
+      </nav>
+    </footer>
   </div>
-
-  <!-- Hero -->
-  <section class="text-center py-20 px-4">
-    <h1 class="text-4xl font-bold mb-4">Welcome to MySite</h1>
-    <p class="text-lg mb-6 max-w-xl mx-auto">A simple and clean template using Tailwind CSS and DaisyUI. Easy to modify and reuse!</p>
-    <button class="btn btn-primary">Get Started</button>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer items-center justify-between p-4 bg-base-200 text-sm">
-    <aside>
-      <p>© 2025 MySite. All rights reserved.</p>
-    </aside>
-    <nav class="flex gap-2">
-      <a class="link link-hover">Privacy</a>
-      <a class="link link-hover">Terms</a>
-    </nav>
-  </footer>
 
 </body>
 </html>
