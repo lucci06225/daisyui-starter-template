@@ -3,53 +3,134 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Clean DaisyUI Template</title>
-
-  <!-- Tailwind CSS -->
+  <title>TailwindCSS + daisyUI Boilerplate</title>
+  <!-- Tailwind + daisyUI prebuilt -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- DaisyUI -->
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-  <script>
-    tailwind.config = {
-      plugins: [window.daisyui],
-    };
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body >
+<body class="font-sans text-gray-900">
 
-  <div class="bg-base-100 text-base-content max-w-4xl mx-auto">
-    <!-- Navbar -->
-    <div class="navbar bg-base-200 px-4">
-      <div class="flex-1">
-        <a class="btn btn-ghost text-xl">MySite</a>
-      </div>
-      <div class="flex-none hidden md:flex gap-2">
-        <a class="btn btn-sm btn-ghost" href="#">Home</a>
-        <a class="btn btn-sm btn-ghost" href="#">About</a>
-        <a class="btn btn-sm btn-ghost" href="#">Contact</a>
+  <!-- Header -->
+  <header class="bg-white shadow">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16 items-center">
+        <!-- Logo -->
+        <a href="#" class="text-xl font-bold text-indigo-600">MyLogo</a>
+
+        <!-- Nav Menu -->
+        <nav class="hidden md:flex space-x-6">
+          <a href="#" class="hover:text-indigo-500">Home</a>
+          <a href="#" class="hover:text-indigo-500">About</a>
+          <a href="#" class="hover:text-indigo-500">Services</a>
+          <a href="#" class="hover:text-indigo-500">Contact</a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden p-2 text-gray-600 hover:text-indigo-500" id="menu-btn">
+          ☰
+        </button>
       </div>
     </div>
-    
-    <!-- Hero -->
-    <section class="text-center py-20 px-4">
-      <h1 class="text-4xl font-bold mb-4">Welcome to MySite</h1>
-      <p class="text-lg mb-6 max-w-xl mx-auto">A simple and clean template using Tailwind CSS and DaisyUI. Easy to modify and reuse!</p>
-      <button class="btn btn-primary">Get Started</button>
-    </section>
-    
-    <!-- Footer -->
-    <footer class="footer items-center justify-between p-4 bg-base-200 text-sm">
-      <aside>
-        <p>© 2025 MySite. All rights reserved.</p>
-      </aside>
-      <nav class="flex gap-2">
-        <a class="link link-hover">Privacy</a>
-        <a class="link link-hover">Terms</a>
-      </nav>
-    </footer>
-  </div>
 
+    <!-- Mobile Nav -->
+    <div class="md:hidden hidden px-4 pb-4 space-y-2" id="mobile-menu">
+      <a href="#" class="block hover:text-indigo-500">Home</a>
+      <a href="#" class="block hover:text-indigo-500">About</a>
+      <a href="#" class="block hover:text-indigo-500">Services</a>
+      <a href="#" class="block hover:text-indigo-500">Contact</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 text-center">
+      <h1 class="text-4xl sm:text-5xl font-bold text-gray-800">
+        Build something <span class="text-indigo-600">amazing</span>
+      </h1>
+      <p class="mt-4 text-lg text-gray-600">
+        A simple Tailwind CSS + daisyUI starter template with sections ready to go.
+      </p>
+      <div class="mt-6 space-x-4">
+        <a href="#" class="btn btn-primary text-white">Get Started</a>
+        <a href="#" class="btn btn-outline btn-primary">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="bg-white">
+    <div class="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <img src="https://via.placeholder.com/500x300" alt="About" class="rounded-lg shadow-lg">
+      <div>
+        <h2 class="text-3xl font-bold text-gray-800">About Us</h2>
+        <p class="mt-4 text-gray-600">
+          We’re passionate about creating beautiful, functional, and user-friendly websites using the latest technologies like TailwindCSS and daisyUI.
+        </p>
+        <a href="#" class="btn btn-primary mt-6">Read More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-gray-800">Our Services</h2>
+      <div class="mt-8 grid gap-6 md:grid-cols-3">
+        <div class="card bg-white shadow-lg p-6">
+          <h3 class="text-xl font-semibold">Web Design</h3>
+          <p class="mt-2 text-gray-600">Beautiful and modern designs tailored to your brand.</p>
+        </div>
+        <div class="card bg-white shadow-lg p-6">
+          <h3 class="text-xl font-semibold">Development</h3>
+          <p class="mt-2 text-gray-600">Clean, efficient, and scalable code for your projects.</p>
+        </div>
+        <div class="card bg-white shadow-lg p-6">
+          <h3 class="text-xl font-semibold">SEO Optimization</h3>
+          <p class="mt-2 text-gray-600">Improve your visibility and reach more customers online.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="bg-white">
+    <div class="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-bold text-gray-800">What Our Clients Say</h2>
+      <div class="mt-8 grid gap-6 md:grid-cols-3">
+        <div class="card bg-gray-50 shadow-lg p-6">
+          <p>"They built my dream website — fast, professional, and beautiful!"</p>
+          <span class="mt-4 block font-semibold">— Sarah K.</span>
+        </div>
+        <div class="card bg-gray-50 shadow-lg p-6">
+          <p>"Their attention to detail and quality is unmatched."</p>
+          <span class="mt-4 block font-semibold">— James P.</span>
+        </div>
+        <div class="card bg-gray-50 shadow-lg p-6">
+          <p>"From design to deployment, they made the whole process easy."</p>
+          <span class="mt-4 block font-semibold">— Emily R.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300">
+    <div class="max-w-7xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <p class="text-sm">&copy; 2025 MyWebsite. All rights reserved.</p>
+        <div class="mt-4 md:mt-0 space-x-4">
+          <a href="#" class="hover:text-white">Privacy Policy</a>
+          <a href="#" class="hover:text-white">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script for Mobile Menu -->
+  <script>
+    document.getElementById('menu-btn').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
 </body>
 </html>
